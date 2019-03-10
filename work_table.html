@@ -103,11 +103,17 @@ tooltip.up tooltiptext.up::after {
 tooltip.up:hover tooltiptext.up {
     visibility: visible;
 }
+
+caption {
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
 </style>
 </head>
 <body>
 
 <table style="width:100%">
+	<caption>Asosiy</caption>
 	<tr>
 		<th>Ism:</th>
 		<td>Akmal</td>
@@ -129,13 +135,62 @@ tooltip.up:hover tooltiptext.up {
 	</tr>
 	<tr>
 	<th>
-		<tooltip class="right">Ish vaqti:
+		<tooltip class="right">Ish kunlari:
 			<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
 		</tooltip>
     </th>
-  	  <td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
+  		<td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
+	</tr>
+	<tr>
+	<th>
+		Ish faoliyati:
+    </th>
+  		<td>Ko'nduzgi... yoki Kechasi...</td>
 	</tr>
 </table>
+
+<br>
+
+<table style="width:100%">
+	<caption>Narx</caption>
+	<tr>
+		<th>Ism:</th>
+		<td>Akmal</td>
+	</tr>
+	<tr>
+		<th rowspan="2">Ish vaqti:</th>
+		<td>		
+		<tooltip class="up">08:30
+			<tooltiptext class="up">Vaqt boshlashi</tooltiptext>
+		</tooltip>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<tooltip class="down">18:30
+			<tooltiptext class="down">Vaqt tugashi</tooltiptext>
+		</tooltip>
+		</td>
+	</tr>
+	<tr>
+	<th>
+		<tooltip class="right">Ish kunlari:
+			<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
+		</tooltip>
+    </th>
+  		<td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
+	</tr>
+	<tr>
+	<th>
+		Ish faoliyati:
+    </th>
+  		<td>Ko'nduzgi... yoki Kechasi...</td>
+	</tr>
+</table>
+
+
+
+
 
 </body>
 </html>
