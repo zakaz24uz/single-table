@@ -1,196 +1,159 @@
 <!DOCTYPE html>
 <html lang="uz_UZ">
-<head>
-<meta charset="UTF-8">
-<title>Ish Jadvali</title>
-<style>
-body {
-	background-color: #404040;
-	color: #ffffff; 
-}
-
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	word-wrap: break-word;
-}
-
-th, td {
-	padding: 5px;
-	text-align: center;    
-}
-
-
-tooltip:hover tooltiptext {
-		opacity: 4;
-}
-
-tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px dotted black;
-}
-
-tooltip tooltiptext::after {
-	content: "";
-	position: absolute;
-    border-width: 5px;
-    border-style: solid;
-}
-
-tooltip tooltiptext {
-	visibility: hidden;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px;
-	position: absolute;
-	z-index: 1;
-	opacity: 0;
-	transition: opacity 1s;
-}
-
-tooltip.right tooltiptext.right {
-	width: 200px;
-	top: -5px;
-	left: 110%;
-}
-
-tooltip.right tooltiptext.right::after {
-	top: 50%;
-	right: 100%;
-	margin-top: -5px;
-	border-color: transparent black transparent transparent;
-}
-
-tooltip.right:hover tooltiptext.right {
-	visibility: visible;
-}
-
-tooltip.down tooltiptext.down {
-    width: 120px;
-    top: 150%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-tooltip.down tooltiptext.down::after {
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-color: transparent transparent black transparent;
-}
-
-tooltip.down:hover tooltiptext.down {
-    visibility: visible;
-}
-
-tooltip.up tooltiptext.up {
-    width: 120px;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-tooltip.up tooltiptext.up::after {
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-color: black transparent transparent transparent;
-}
-
-tooltip.up:hover tooltiptext.up {
-    visibility: visible;
-}
-
-caption {
-	text-transform: uppercase;
-	margin-bottom: 5px;
-}
-</style>
-</head>
-<body>
-
-<table style="width:100%">
-	<caption>Asosiy</caption>
-	<tr>
-		<th>Ism:</th>
-		<td>Akmal</td>
-	</tr>
-	<tr>
-		<th rowspan="2">Ish vaqti:</th>
-		<td>		
-		<tooltip class="up">08:30
-			<tooltiptext class="up">Vaqt boshlashi</tooltiptext>
-		</tooltip>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		<tooltip class="down">18:30
-			<tooltiptext class="down">Vaqt tugashi</tooltiptext>
-		</tooltip>
-		</td>
-	</tr>
-	<tr>
-	<th>
-		<tooltip class="right">Ish kunlari:
-			<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
-		</tooltip>
-    </th>
-  		<td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
-	</tr>
-	<tr>
-	<th>
-		Ish faoliyati:
-    </th>
-  		<td>Ko'nduzgi... yoki Kechasi...</td>
-	</tr>
-</table>
-
-<br>
-
-<table style="width:100%">
-	<caption>Narx</caption>
-	<tr>
-		<th>Ism:</th>
-		<td>Akmal</td>
-	</tr>
-	<tr>
-		<th rowspan="2">Ish vaqti:</th>
-		<td>		
-		<tooltip class="up">08:30
-			<tooltiptext class="up">Vaqt boshlashi</tooltiptext>
-		</tooltip>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		<tooltip class="down">18:30
-			<tooltiptext class="down">Vaqt tugashi</tooltiptext>
-		</tooltip>
-		</td>
-	</tr>
-	<tr>
-	<th>
-		<tooltip class="right">Ish kunlari:
-			<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
-		</tooltip>
-    </th>
-  		<td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
-	</tr>
-	<tr>
-	<th>
-		Ish faoliyati:
-    </th>
-  		<td>Ko'nduzgi... yoki Kechasi...</td>
-	</tr>
-</table>
-
-
-
-
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ish Jadvali</title>
+		<style>
+		body {
+			background-color: #404040;
+			color: #ffffff;
+		}
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			word-wrap: break-word;
+		}
+		th, td {
+			padding: 5px;
+			text-align: center;
+		}
+		tooltip:hover tooltiptext {
+				opacity: 4;
+		}
+		tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+		tooltip tooltiptext::after {
+			content: "";
+			position: absolute;
+		border-width: 5px;
+		border-style: solid;
+		}
+		tooltip tooltiptext {
+			visibility: hidden;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 1s;
+		}
+		tooltip.right tooltiptext.right {
+			width: 200px;
+			top: -5px;
+			left: 110%;
+		}
+		tooltip.right tooltiptext.right::after {
+			top: 50%;
+			right: 100%;
+			margin-top: -5px;
+			border-color: transparent black transparent transparent;
+		}
+		tooltip.right:hover tooltiptext.right {
+			visibility: visible;
+		}
+		tooltip.down tooltiptext.down {
+		width: 120px;
+		top: 150%;
+		left: 50%;
+		margin-left: -60px;
+		}
+		tooltip.down tooltiptext.down::after {
+		bottom: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-color: transparent transparent black transparent;
+		}
+		tooltip.down:hover tooltiptext.down {
+		visibility: visible;
+		}
+		tooltip.up tooltiptext.up {
+		width: 120px;
+		bottom: 150%;
+		left: 50%;
+		margin-left: -60px;
+		}
+		tooltip.up tooltiptext.up::after {
+		top: 100%; /* At the bottom of the tooltip */
+		left: 50%;
+		margin-left: -5px;
+		border-color: black transparent transparent transparent;
+		}
+		tooltip.up:hover tooltiptext.up {
+		visibility: visible;
+		}
+		caption {
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+		</style>
+	</head>
+	<body>
+		<table style="width:100%">
+			<caption>Asosiy</caption>
+			<tr>
+				<th>Ism:</th>
+				<td>Akmal</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Ish vaqti:</th>
+				<td>
+					<tooltip class="up">08:30
+					<tooltiptext class="up">Vaqt boshlashi</tooltiptext>
+					</tooltip>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<tooltip class="down">18:30
+					<tooltiptext class="down">Vaqt tugashi</tooltiptext>
+					</tooltip>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<tooltip class="right">Ish kunlari:
+					<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
+					</tooltip>
+				</th>
+				<td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
+			</tr>
+			<tr>
+				<th>
+					Ish faoliyati:
+				</th>
+				<td>Ko'nduzgi... yoki Kechasi...</td>
+			</tr>
+		</table>
+		<br>
+		<table style="width:100%">
+			<caption>Narx</caption>
+			<tr>
+				<th rowspan="2">
+					Pul turi:
+				</th>
+				<td>
+					Naqt yoki Elektron
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Sum yoki $-Dollar
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Narx:
+				</th>
+				<td>
+					20.000
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
