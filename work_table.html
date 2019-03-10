@@ -20,15 +20,26 @@ th, td {
 	text-align: center;    
 }
 
+
+tooltip:hover tooltiptext {
+		opacity: 4;
+}
+
 tooltip {
 	position: relative;
 	display: inline-block;
 	border-bottom: 1px dotted black;
 }
 
+tooltip tooltiptext::after {
+	content: "";
+	position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
 tooltip tooltiptext {
 	visibility: hidden;
-	width: 200px;
 	background-color: black;
 	color: #fff;
 	text-align: center;
@@ -36,25 +47,61 @@ tooltip tooltiptext {
 	padding: 5px;
 	position: absolute;
 	z-index: 1;
-	top: -5px;
-	left: 110%;
 	opacity: 0;
-	transition: opacity 3s;
+	transition: opacity 1s;
 }
 
-tooltip tooltiptext::after {
-	content: "";
-	position: absolute;
+tooltip.right tooltiptext.right {
+	width: 200px;
+	top: -5px;
+	left: 110%;
+}
+
+tooltip.right tooltiptext.right::after {
 	top: 50%;
 	right: 100%;
 	margin-top: -5px;
-	border-width: 5px;
-	border-style: solid;
 	border-color: transparent black transparent transparent;
 }
-tooltip:hover tooltiptext {
+
+tooltip.right:hover tooltiptext.right {
 	visibility: visible;
-	opacity: 4;
+}
+
+tooltip.down tooltiptext.down {
+    width: 120px;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+tooltip.down tooltiptext.down::after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: transparent transparent black transparent;
+}
+
+tooltip.down:hover tooltiptext.down {
+    visibility: visible;
+}
+
+tooltip.up tooltiptext.up {
+    width: 120px;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+tooltip.up tooltiptext.up::after {
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-color: black transparent transparent transparent;
+}
+
+tooltip.up:hover tooltiptext.up {
+    visibility: visible;
 }
 </style>
 </head>
@@ -67,15 +114,23 @@ tooltip:hover tooltiptext {
 	</tr>
 	<tr>
 		<th rowspan="2">Ish vaqti:</th>
-		<td>08:30</td>
+		<td>		
+		<tooltip class="up">08:30
+			<tooltiptext class="up">Vaqt boshlashi</tooltiptext>
+		</tooltip>
+		</td>
 	</tr>
 	<tr>
-		<td>18:30</td>
+		<td>
+		<tooltip class="down">18:30
+			<tooltiptext class="down">Vaqt tugashi</tooltiptext>
+		</tooltip>
+		</td>
 	</tr>
 	<tr>
 	<th>
-		<tooltip>Ish vaqti:
-			<tooltiptext>Ishni › Hafta davomiyligi...</tooltiptext>
+		<tooltip class="right">Ish vaqti:
+			<tooltiptext class="right">Ishni › Hafta davomiyligi...</tooltiptext>
 		</tooltip>
     </th>
   	  <td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
