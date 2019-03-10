@@ -19,22 +19,67 @@ th, td {
 	padding: 5px;
 	text-align: center;    
 }
+
+tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+}
+
+tooltip tooltiptext {
+	visibility: hidden;
+	width: 200px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 110%;
+	opacity: 0;
+	transition: opacity 3s;
+}
+
+tooltip tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent black transparent transparent;
+}
+tooltip:hover tooltiptext {
+	visibility: visible;
+	opacity: 4;
+}
 </style>
 </head>
 <body>
 
 <table style="width:100%">
-  <tr>
-    <th>Ism:</th>
-    <td>Akmal</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Ish vaqti:</th>
-    <td>08:30</td>
-  </tr>
-  <tr>
-    <td>18:30</td>
-  </tr>
+	<tr>
+		<th>Ism:</th>
+		<td>Akmal word-wrap: break-word; word-wrap: break-word; word-wrap: break-word; word-wrap: break-word;</td>
+	</tr>
+	<tr>
+		<th rowspan="2">Ish vaqti:</th>
+		<td>08:30</td>
+	</tr>
+	<tr>
+		<td>18:30</td>
+	</tr>
+	<tr>
+	<th>
+		<tooltip>Ish vaqti:
+			<tooltiptext>Ishni › Hafta davomiyligi...</tooltiptext>
+		</tooltip>
+    </th>
+  	  <td>Dushanba, Seshanba, Chorshanba, Payshanba, Juma, Shanba</td>
+	</tr>
 </table>
 
 </body>
